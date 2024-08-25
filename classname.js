@@ -23,91 +23,55 @@ function extractClassNames(jsxCode) {
 }
 
 // Example JSX code
-const jsxCode = `<div className='register'>
-			<button className='clost__btn'>
-				<X />
-			</button>
-			<div className='register__header'>
-				<button
-					className='register__btn'
-					onClick={() => setType('login')}
-				>
-					Login
-				</button>
-				<button
-					className='register__btn'
-					onClick={() => setType('reg')}
-				>
-					Register
-				</button>
-			</div>
-			<form className='register__form' method='POST'>
-				{type === 'reg' && (
-					<>
-						<div className='field'>
-							<label htmlFor='fn'>
-								First Name <span className='required'>*</span>
-							</label>
-							<input
-								type='text'
-								name='fname'
-								id='fn'
-								required
-								placeholder='First Name'
-							/>
+const jsxCode = `<div className='hero'>
+			<Splide
+				tag='section'
+				options={{}}
+				hasTrack={false}
+				aria-label='...'
+			>
+				<SplideTrack>
+					<SplideSlide className='slide'>
+						<div className='container'>
+							<h2 className='slide__heading'>
+								We Build your dream
+							</h2>
+							<p className='slide__para'>
+								Hurry up! don't miss it!Before the offers end!
+							</p>
+							<a href='#' className='slide__btn'>
+								Discover Now
+							</a>
 						</div>
-						<div className='field'>
-							<label htmlFor='ln'>
-								Last Name <span className='required'>*</span>
-							</label>
-							<input
-								type='text'
-								name='lname'
-								id='ln'
-								required
-								placeholder='Last Name'
-							/>
+					</SplideSlide>
+					<SplideSlide className='slide'>
+						<div className='container'>
+							<h2 className='slide__heading'>
+								Big Choice Hand Driling
+							</h2>
+							<p className='slide__para'>
+								Hurry up! don't miss it!Before the offers end!
+							</p>
+							<a href='#' className='slide__btn'>
+								Discover Now
+							</a>
 						</div>
-					</>
-				)}
-				<div className='field'>
-					<label htmlFor='em'>
-						Email Address <span className='required'>*</span>
-					</label>
-					<input
-						type='email'
-						name='email'
-						id='em'
-						required
-						placeholder='Email Address'
-					/>
-				</div>
-				<div className='field'>
-					<label htmlFor='pass'>
-						Password <span className='required'>*</span>
-					</label>
-					<input
-						type='password'
-						name='password'
-						id='pass'
-						required
-						placeholder='Password'
-					/>
-				</div>
-				{type === 'login' && (
-					<a className='forget' href='#'>
-						Forget your password ?
-					</a>
-				)}
-				<button type='submit'>
-					{type === 'login' ? 'Login' : 'Create new account'}
-				</button>
-				<p className='terms'>
-					New user discount applies only to full price items. By
-					providing your email address, you agree to our Privacy
-					Policy and Terms of Service.
-				</p>
-			</form>
+					</SplideSlide>
+					<SplideSlide className='slide'>
+						<div className='container'>
+							<h2 className='slide__heading'>
+								Best choice of the year
+							</h2>
+							<p className='slide__para'>
+								Discount 20% on products & free shipping
+							</p>
+							<a href='#' className='slide__btn'>
+								Discover Now
+							</a>
+						</div>
+					</SplideSlide>
+				</SplideTrack>
+			</Splide>
 		</div>`;
 
 // Extract class names and copy to clipboard
