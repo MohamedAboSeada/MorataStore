@@ -573,13 +573,13 @@ a {
   background-color: #f1f1f1;
 }
 .hero .slide:nth-child(1) {
-  background-image: url("./images/slider/slider3.png");
+  background-image: url("C:/Users/Mor3eb/Desktop/files/react js/MorataStore/public/images/slider/slider3.png");
 }
 .hero .slide:nth-child(2) {
-  background-image: url("./images/slider/slider2.png");
+  background-image: url("C:/Users/Mor3eb/Desktop/files/react js/MorataStore/public/images/slider/slider1.png");
 }
 .hero .slide:nth-child(3) {
-  background-image: url("./images/slider/slider1.png");
+  background-image: url("C:/Users/Mor3eb/Desktop/files/react js/MorataStore/public/images/slider/slider2.png");
 }
 .hero .slide .container {
   display: flex;
