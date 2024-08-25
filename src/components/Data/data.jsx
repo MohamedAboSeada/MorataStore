@@ -4,7 +4,7 @@ const LangOptions = [
 	{
 		label: (
 			<>
-				<img src='src\assets\langs\en.png' />
+				<img src='./src/assets/langs/en.png' />
 				English
 			</>
 		),
@@ -13,7 +13,7 @@ const LangOptions = [
 	{
 		label: (
 			<>
-				<img src='src\assets\langs\ar.png' />
+				<img src='./src/assets/langs/ar.png' />
 				العربية
 			</>
 		),
@@ -23,7 +23,7 @@ const LangOptions = [
 	{
 		label: (
 			<>
-				<img src='src\assets\langs\fr.png' />
+				<img src='./src/assets/langs/fr.png' />
 				France
 			</>
 		),
@@ -32,7 +32,7 @@ const LangOptions = [
 	{
 		label: (
 			<>
-				<img src='src\assets\langs\gr.png' />
+				<img src='./src/assets/langs/gr.png' />
 				German
 			</>
 		),
@@ -41,7 +41,7 @@ const LangOptions = [
 	{
 		label: (
 			<>
-				<img src='src\assets\langs\it.png' />
+				<img src='./src/assets/langs/it.png' />
 				Italian
 			</>
 		),
