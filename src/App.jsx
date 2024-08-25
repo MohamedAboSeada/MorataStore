@@ -1,6 +1,7 @@
 import React from 'react';
 import TopHeader from './components/TopHeader';
 import Nav from './components/Nav';
+import Hero from './components/Hero';
 import {
 	CurrencyContext,
 	LanguageContext,
@@ -10,7 +11,6 @@ import {
 import './css/main.css';
 
 function App() {
-	console.log(import.meta.env.BASE_URL);
 	return (
 		<CurrencyContext>
 			<LanguageContext>
@@ -19,6 +19,7 @@ function App() {
 						<>
 							<TopHeader />
 							<Nav />
+							<Hero />
 						</>
 					</CartContext>
 				</FavContext>
