@@ -34,7 +34,7 @@
 		.slide__para {
 			font-size: 1.3rem;
 			color: #e5e5e5;
-            letter-spacing: 1.5px;
+			letter-spacing: 1.5px;
 		}
 		.slide__btn {
 			margin-top: 10px;
@@ -47,7 +47,7 @@
 			text-transform: uppercase;
 		}
 		@media (max-width: 980px) {
-			height: calc(100vh - 200px);
+			height: calc(100vh - 300px);
 			.container {
 				gap: 10px;
 			}
