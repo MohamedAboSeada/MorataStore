@@ -467,6 +467,7 @@ a {
 .register__header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  height: 70px;
 }
 
 .register__btn {
