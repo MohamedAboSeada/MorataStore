@@ -290,6 +290,7 @@
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	height: 50px;
+	margin-bottom: 10px;
 }
 
 .register__btn {
@@ -353,7 +354,6 @@
 }
 .terms {
 	text-align: center;
-	margin-top: 10px;
 	color: #777;
 }
 @media (max-width: 980px) {
