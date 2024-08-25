@@ -1,0 +1,137 @@
+@mixin resetBtn {
+	border: none;
+	outline: none;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 10px;
+	width: inherit;
+	background-color: transparent;
+	& img {
+		width: 20px;
+	}
+	height: 100%;
+}
+
+.topheader {
+	background-color: #222;
+	border-bottom: 1px solid #444;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.dropdown {
+		position: relative;
+		border-right: 1px solid #444;
+		display: flex;
+		z-index: 999;
+		align-items: center;
+
+		.dropdown__btn {
+			@include resetBtn;
+			color: #eee;
+			cursor: pointer;
+			padding: 0 10px;
+			.dropdown-icon {
+				width: 0;
+				height: 0;
+				border-left: 5px solid transparent;
+				border-right: 5px solid transparent;
+				border-top: 5px solid #fff;
+				display: inline-block;
+				margin-left: 5px;
+			}
+		}
+
+		.dropdown__options {
+			position: absolute;
+			list-style: none;
+			padding: 0;
+			top: calc(100% + 10px);
+			left: 0;
+			width: 250px;
+			background-color: #fff;
+			border: 1px solid #ccc;
+			transition: 300ms ease;
+
+			.dropdown__option {
+				width: 100%;
+				&:not(:last-child) {
+					border-bottom: 1px solid #ccc;
+				}
+			}
+
+			.dropdown__value {
+				padding: 5px;
+				@include resetBtn;
+				cursor: pointer;
+				&:hover {
+					background-color: #f1f1f1;
+				}
+			}
+
+			&.hide {
+				visibility: hidden;
+				opacity: 0;
+				top: calc(100% + 20px);
+			}
+		}
+	}
+
+	.left,
+	.right {
+		display: flex;
+		align-items: center;
+	}
+
+	.right {
+		list-style: none;
+		padding: 0;
+		& a {
+			color: #aaa;
+			text-decoration: none;
+			transition: 300ms ease;
+			padding: 0 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 35px;
+			&:hover {
+				color: orange;
+			}
+		}
+	}
+
+	.help__btn {
+		color: orange;
+		text-decoration: none;
+		padding: 0 10px;
+	}
+
+	@media (max-width: 980px) {
+		.container {
+			padding: 0;
+		}
+		.dropdown__options {
+			width: 180px !important;
+		}
+		.dropdown__btn {
+			height: 30px !important;
+		}
+		.dropdown {
+			border: none;
+		}
+		.dropdown:nth-child(1) {
+			border-right: 1px solid #444;
+		}
+
+		.right {
+			display: none;
+		}
+		.help__btn {
+			display: none;
+		}
+	}
+}
