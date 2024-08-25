@@ -300,11 +300,28 @@ function Side({ type, setSideHide, cartP, favs, pquan, fquan }) {
 }
 
 function RegesterForm({ hidden, setHidden }) {
+	// form states
+	let [fname, setFname] = useState('');
+	let [lname, setLname] = useState('');
+	let [email, setemail] = useState('');
+	let [password, setPassword] = useState('');
+	let [type, setType] = useState('login');
+
 	let handleHide = () => {
 		setHidden(true);
 	};
 
-	let [type, setType] = useState('login');
+	let handleSubmit = (e) => {
+		e.preventDefault();
+
+		let userData =
+			type === 'login'
+				? { email, password }
+				: { fname, lname, email, password };
+
+		console.log(userData);
+	};
+
 	return (
 		<div className={`register ${hidden && 'hide'}`}>
 			<button onClick={handleHide} className='clost__btn'>
@@ -313,18 +330,28 @@ function RegesterForm({ hidden, setHidden }) {
 			<div className='register__header'>
 				<button
 					className={`register__btn ${type === 'login' && 'active'}`}
-					onClick={() => setType('login')}
+					onClick={() => {
+						setemail('');
+						setPassword('');
+						setType('login');
+					}}
 				>
 					Login
 				</button>
 				<button
 					className={`register__btn ${type === 'reg' && 'active'}`}
-					onClick={() => setType('reg')}
+					onClick={() => {
+						setFname('');
+						setLname('');
+						setemail('');
+						setPassword('');
+						setType('reg');
+					}}
 				>
 					Register
 				</button>
 			</div>
-			<form className='register__form' method='POST'>
+			<form onSubmit={handleSubmit} className='register__form' method='POST'>
 				{type === 'reg' && (
 					<>
 						<div className='field'>
@@ -336,6 +363,8 @@ function RegesterForm({ hidden, setHidden }) {
 								name='fname'
 								id='fn'
 								required
+								value={fname}
+								onChange={(e) => setFname(e.target.value)}
 								placeholder='First Name'
 							/>
 						</div>
@@ -348,6 +377,8 @@ function RegesterForm({ hidden, setHidden }) {
 								name='lname'
 								id='ln'
 								required
+								value={lname}
+								onChange={(e) => setLname(e.target.value)}
 								placeholder='Last Name'
 							/>
 						</div>
@@ -362,6 +393,8 @@ function RegesterForm({ hidden, setHidden }) {
 						name='email'
 						id='em'
 						required
+						value={email}
+						onChange={(e) => setemail(e.target.value)}
 						placeholder='Email Address'
 					/>
 				</div>
@@ -374,6 +407,8 @@ function RegesterForm({ hidden, setHidden }) {
 						name='password'
 						id='pass'
 						required
+						value={password}
+						onChange={(e) => setPassword(e.target.value)}
 						placeholder='Password'
 					/>
 				</div>
