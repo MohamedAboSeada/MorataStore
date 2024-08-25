@@ -4,7 +4,9 @@ const LangOptions = [
 	{
 		label: (
 			<>
-				<img src='./src/assets/langs/en.png' />
+				<img
+					src={`${import.meta.env.BASE_URL}/src/assets/langs/en.png`}
+				/>
 				English
 			</>
 		),
