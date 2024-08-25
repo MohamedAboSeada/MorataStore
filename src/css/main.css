@@ -453,10 +453,11 @@ a {
   width: 35%;
   padding: 20px;
   display: grid;
-  gap: 20px;
+  gap: 15px;
   grid-template-columns: 1fr;
   border-radius: 20px;
   transition: 300ms ease;
+  align-content: flex-start;
 }
 
 .clost__btn {
@@ -467,7 +468,7 @@ a {
 .register__header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  height: 70px;
+  height: 50px;
 }
 
 .register__btn {

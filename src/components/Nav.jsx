@@ -325,7 +325,7 @@ function RegesterForm({ hidden, setHidden }) {
 	return (
 		<div className={`register ${hidden && 'hide'}`}>
 			<button onClick={handleHide} className='clost__btn'>
-				<X />
+				<X color="#666"/>
 			</button>
 			<div className='register__header'>
 				<button
