@@ -10,6 +10,7 @@ import {
 import './css/main.css';
 
 function App() {
+	console.log(import.meta.env.BASE_URL);
 	return (
 		<CurrencyContext>
 			<LanguageContext>

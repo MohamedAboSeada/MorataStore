@@ -4,9 +4,7 @@ const LangOptions = [
 	{
 		label: (
 			<>
-				<img
-					src={`${import.meta.env.BASE_URL}/src/assets/langs/en.png`}
-				/>
+				<img src='./images/langs/en.png' />
 				English
 			</>
 		),
@@ -15,7 +13,7 @@ const LangOptions = [
 	{
 		label: (
 			<>
-				<img src='./src/assets/langs/ar.png' />
+				<img src='./images/langs/ar.png' />
 				العربية
 			</>
 		),
@@ -25,7 +23,7 @@ const LangOptions = [
 	{
 		label: (
 			<>
-				<img src='./src/assets/langs/fr.png' />
+				<img src='./images/langs/fr.png' />
 				France
 			</>
 		),
@@ -34,7 +32,7 @@ const LangOptions = [
 	{
 		label: (
 			<>
-				<img src='./src/assets/langs/gr.png' />
+				<img src='./images/langs/gr.png' />
 				German
 			</>
 		),
@@ -43,7 +41,7 @@ const LangOptions = [
 	{
 		label: (
 			<>
-				<img src='./src/assets/langs/it.png' />
+				<img src='./images/langs/it.png' />
 				Italian
 			</>
 		),

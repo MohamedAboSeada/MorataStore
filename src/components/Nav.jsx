@@ -60,7 +60,7 @@ function Nav() {
 					<div className='logo'>
 						<a className='home__btn' href='#'>
 							<img
-								src='./src/assets/misc/logo.png'
+								src='./images/misc/logo.png'
 								alt='MorataStore'
 							/>
 						</a>
@@ -250,7 +250,7 @@ function Side({ type, setSideHide, cartP, favs, pquan, fquan }) {
 				<div className='empty'>
 					<img
 						className='empty__image'
-						src='./src/assets/icons/box.svg'
+						src='./images/icons/box.svg'
 					/>
 					<p className='empty__text'>Your Cart is empty</p>
 				</div>
@@ -268,7 +268,7 @@ function Side({ type, setSideHide, cartP, favs, pquan, fquan }) {
 				<div className='empty'>
 					<img
 						className='empty__image'
-						src='./src/assets/icons/dislike.svg'
+						src='./images/icons/dislike.svg'
 					/>
 					<p className='empty__text'>Wishlist is empty</p>
 				</div>
@@ -351,7 +351,11 @@ function RegesterForm({ hidden, setHidden }) {
 					Register
 				</button>
 			</div>
-			<form onSubmit={handleSubmit} className='register__form' method='POST'>
+			<form
+				onSubmit={handleSubmit}
+				className='register__form'
+				method='POST'
+			>
 				{type === 'reg' && (
 					<>
 						<div className='field'>
