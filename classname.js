@@ -23,55 +23,43 @@ function extractClassNames(jsxCode) {
 }
 
 // Example JSX code
-const jsxCode = `<div className='hero'>
-			<Splide
-				tag='section'
-				options={{}}
-				hasTrack={false}
-				aria-label='...'
-			>
-				<SplideTrack>
-					<SplideSlide className='slide'>
-						<div className='container'>
-							<h2 className='slide__heading'>
-								We Build your dream
-							</h2>
-							<p className='slide__para'>
-								Hurry up! don't miss it!Before the offers end!
-							</p>
-							<a href='#' className='slide__btn'>
-								Discover Now
-							</a>
-						</div>
-					</SplideSlide>
-					<SplideSlide className='slide'>
-						<div className='container'>
-							<h2 className='slide__heading'>
-								Big Choice Hand Driling
-							</h2>
-							<p className='slide__para'>
-								Hurry up! don't miss it!Before the offers end!
-							</p>
-							<a href='#' className='slide__btn'>
-								Discover Now
-							</a>
-						</div>
-					</SplideSlide>
-					<SplideSlide className='slide'>
-						<div className='container'>
-							<h2 className='slide__heading'>
-								Best choice of the year
-							</h2>
-							<p className='slide__para'>
-								Discount 20% on products & free shipping
-							</p>
-							<a href='#' className='slide__btn'>
-								Discover Now
-							</a>
-						</div>
-					</SplideSlide>
-				</SplideTrack>
-			</Splide>
+const jsxCode = `<div className='categories'>
+			<div className='container'>
+				<div className='cats'>
+					<a href='#' className='cat'>
+						<img src='./images/tools/paint_brush.jpeg' />
+						Paint Brush
+					</a>
+					<a href='#' className='cat'>
+						<img src='./images/tools/driling.jpeg' />
+						Drilling
+					</a>
+					<a href='#' className='cat'>
+						<img src='./images/tools/wheel.jpeg' />
+						WheelBarrow
+					</a>
+					<a href='#' className='cat'>
+						<img src='./images/tools/cutting.jpeg' />
+						Cutting
+					</a>
+					<a href='#' className='cat'>
+						<img src='./images/tools/voltmeter.jpeg' />
+						Voltmeter
+					</a>
+					<a href='#' className='cat'>
+						<img src='./images/tools/screw.jpeg' />
+						ScrewDriver
+					</a>
+					<a href='#' className='cat'>
+						<img src='./images/tools/hammer.jpeg' />
+						Hammers
+					</a>
+					<a href='#' className='cat'>
+						<img src='./images/tools/ladders.jpeg' />
+						Ladders
+					</a>
+				</div>
+			</div>
 		</div>`;
 
 // Extract class names and copy to clipboard
