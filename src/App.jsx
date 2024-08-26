@@ -10,8 +10,9 @@ import {
 	CartContext,
 	FavContext,
 } from './components/contexts';
-
 import './css/main.css';
+import Drilling from './components/Drilling';
+import Cutting from './components/Cutting';
 
 function App() {
 	return (
@@ -25,6 +26,8 @@ function App() {
 							<Hero />
 							<Categories />
 							<TopDeals targetDate={'2024-12-1'} />
+							<Drilling />
+							<Cutting />
 						</>
 					</CartContext>
 				</FavContext>

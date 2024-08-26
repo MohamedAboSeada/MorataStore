@@ -2,11 +2,13 @@ import React from 'react';
 import { useState } from 'react';
 import { createContext } from 'react';
 import { CurrencyOptions, LangOptions } from './Data/data.jsx';
+import { useEffect } from 'react';
 
 let currencyContext = createContext();
 let langContext = createContext();
 let cartContext = createContext();
 let favContext = createContext();
+let resContext = createContext();
 
 function CurrencyContext({ children }) {
 	let [cur, setCur] = useState(CurrencyOptions[0]);
@@ -46,13 +48,32 @@ function FavContext({ children }) {
 	);
 }
 
+function Responsive({ children }) {
+	let [innerWidth, setInnerWidth] = useState(window.innerWidth);
+	useEffect(() => {
+		let handleResize = () => {};
+		window.addEventListener('resize', handleResize);
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	}, [innerWidth]);
+
+	return (
+		<resContext.Provider value={{ innerWidth, setInnerWidth }}>
+			{children}
+		</resContext.Provider>
+	);
+}
+
 export {
 	currencyContext,
 	langContext,
 	cartContext,
 	favContext,
+	resContext,
 	CurrencyContext,
 	LanguageContext,
 	CartContext,
 	FavContext,
+	Responsive,
 };

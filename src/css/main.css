@@ -17,6 +17,17 @@
 body {
   font-family: "Rubik", sans-serif;
 }
+body::-webkit-scrollbar {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 7px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #333;
+}
+body::-webkit-scrollbar-track {
+  background-color: #ccc;
+}
 
 * {
   margin: 0;
@@ -33,7 +44,7 @@ body {
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1230px;
+    width: 1300px;
   }
 }
 
@@ -71,6 +82,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 230px;
 }
 .product .product__thumbnail img {
   width: 100%;
@@ -158,6 +170,11 @@ a {
   background-color: #000;
   color: #fff;
   border-radius: 5px;
+}
+@media (max-width: 980px) {
+  .product .product__thumbnail {
+    height: 150px;
+  }
 }
 
 .fadeInAnim {
@@ -810,22 +827,72 @@ a {
   color: #fff;
 }
 
-.topdeals {
+.section {
   padding: 50px 0;
-  background-color: #fbfbfb;
+  background-color: #f1f1f1;
 }
-.topdeals .container {
+.section .container {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
-.topdeals .container .section__header {
+.section .container .content {
+  display: flex;
+  gap: 15px;
+}
+.section .container .content .sp {
+  width: 65%;
+}
+.section .container .content .content__image {
+  width: 35%;
+  background-image: url("C:/Users/Mor3eb/Desktop/files/react js/MorataStore/public/images/products_slider1/Drilling.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+}
+.section .container .content .content__image .spc__badge {
+  background-color: orange;
+  color: #000 !important;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+.section .container .content .content__image .content__data h3 {
+  color: #fff;
+  margin: 15px 0 20px 0;
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+.section .container .content .content__image .content__data p {
+  color: #fff;
+}
+.section .container .content .content__image .content__data p span {
+  color: orange;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.section .container .section__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #e5e5e5;
 }
-.topdeals .container .section__header h2 {
+.section .container .section__header .header__btn {
+  color: #000;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #444;
+  font-size: larger;
+}
+.section .container .section__header h2 {
   height: 50px;
   display: flex;
   align-items: center;
@@ -833,7 +900,7 @@ a {
   position: relative;
   color: #444;
 }
-.topdeals .container .section__header h2::before {
+.section .container .section__header h2::before {
   content: "";
   position: absolute;
   bottom: -2px;
@@ -842,17 +909,17 @@ a {
   height: 3px;
   background-color: orange;
 }
-.topdeals .container .section__header .counter {
+.section .container .section__header .counter {
   font-size: 1.2rem;
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.topdeals .container .section__header .counter > p {
+.section .container .section__header .counter > p {
   font-weight: 500;
   color: #777;
 }
-.topdeals .container .section__header .counter .countdown {
+.section .container .section__header .counter .countdown {
   border-radius: 5px;
   display: flex;
   background-color: #dd3842;
@@ -863,17 +930,26 @@ a {
   align-items: center;
   padding: 0 20px;
 }
-.topdeals .container .section__header .counter .countdown p {
+.section .container .section__header .counter .countdown p {
   font-weight: 500;
 }
 @media (max-width: 980px) {
-  .topdeals .section__header {
+  .section section {
+    width: 100%;
+  }
+  .section .content__image {
+    display: none !important;
+  }
+  .section .sp {
+    width: 100% !important;
+  }
+  .section .section__header {
     flex-direction: column;
     align-items: flex-start !important;
     gap: 20px;
     padding-bottom: 20px;
   }
-  .topdeals .section__header .counter {
+  .section .section__header .counter {
     flex-direction: column;
     align-items: flex-start !important;
   }

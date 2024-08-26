@@ -3,16 +3,33 @@ import { useRef } from 'react';
 import { Heart, Layers, ShoppingCart } from 'react-feather';
 import { cartContext } from './contexts';
 import { useContext } from 'react';
-import ImageWithSuspense from './helper/ImageWithSuspense';
 
 function Product({ image, image_h, discount, title, price, stock }) {
 	let { setpQuan } = useContext(cartContext);
+	let pimage = useRef(null);
+
+	let addAnimation = () => {
+		pimage.current.classList.add('fadeInAnim');
+		setTimeout(() => {
+			pimage.current.classList.remove('fadeInAnim');
+		}, 100);
+	};
 
 	return (
-		<div className='product'>
+		<div
+			onMouseEnter={() => {
+				pimage.current.src = image_h;
+				addAnimation();
+			}}
+			onMouseLeave={() => {
+				pimage.current.src = image;
+				addAnimation();
+			}}
+			className='product'
+		>
 			<div className='product__thumbnail'>
 				<p className='product__dis'>{discount}%</p>
-				<ImageWithSuspense src={image} />
+				<img ref={pimage} src={image} alt={title} />
 				<div className='thumb__btns'>
 					<button className='thumb__btn'>
 						<Heart size={17} />
@@ -31,18 +48,20 @@ function Product({ image, image_h, discount, title, price, stock }) {
 					${(price - price * (discount / 100)).toFixed(2)}
 					<span>${price}</span>
 				</p>
-				<div className='progress'>
-					<div className='bar'>
-						<div
-							style={{ width: `${(stock / 100) * 100}%` }}
-							className='track'
-						></div>
+				{stock && (
+					<div className='progress'>
+						<div className='bar'>
+							<div
+								style={{ width: `${(stock / 100) * 100}%` }}
+								className='track'
+							></div>
+						</div>
+						<p className='stock'>
+							sold: <span className='remain'>{stock}/100</span>{' '}
+							products
+						</p>
 					</div>
-					<p className='stock'>
-						sold: <span className='remain'>{stock}/100</span>{' '}
-						products
-					</p>
-				</div>
+				)}
 			</div>
 			<button
 				onClick={() => setpQuan((prevQuan) => prevQuan + 1)}
