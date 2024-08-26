@@ -63,6 +63,7 @@ function TopDeals({ targetDate }) {
 						breakpoints: {
 							980: {
 								perPage: 2,
+								arrows: false,
 							},
 						},
 					}}
