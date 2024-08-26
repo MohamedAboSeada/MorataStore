@@ -1,0 +1,50 @@
+[
+	{
+		"id": 0,
+		"image": "./images/products_slider2/asset 48.jpeg",
+		"image_h": "./images/products_slider2/asset 48.jpeg",
+		"title": "Drill Screwdriver Brandix ALX7054 200",
+		"discount": 18,
+		"price": 154.0
+	},
+	{
+		"id": 1,
+		"image": "./images/products_slider2/asset 49.jpeg",
+		"image_h": "./images/products_slider2/asset 49.jpeg",
+		"title": "Drill Screwdriver Brandix ALX7054 200",
+		"discount": 7,
+		"price": 146.0
+	},
+	{
+		"id": 2,
+		"image": "./images/products_slider2/asset 50.jpeg",
+		"image_h": "./images/products_slider2/asset 50.jpeg",
+		"title": "Drill Screwdriver Brandix ALX7054 200",
+		"discount": 13,
+		"price": 231.0
+	},
+	{
+		"id": 3,
+		"image": "./images/products_slider2/asset 51.jpeg",
+		"image_h": "./images/products_slider2/asset 51.jpeg",
+		"title": "Drill Screwdriver Brandix ALX7054 200",
+		"discount": 22,
+		"price": 146.0
+	},
+	{
+		"id": 4,
+		"image": "./images/products/p1.jpeg",
+		"image_h": "./images/products/p1_hover.jpeg",
+		"title": "Drill Screwdriver Brandix ALX7054 200",
+		"discount": 6,
+		"price": 154.0
+	},
+	{
+		"id": 5,
+		"image": "./images/products/p4.jpeg",
+		"image_h": "./images/products/p4_hover.jpeg",
+		"title": "Drill Screwdriver Brandix ALX7054 200",
+		"discount": 20,
+		"price": 116.0
+	}
+]
