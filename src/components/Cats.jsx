@@ -11,7 +11,6 @@ function Categories() {
 					hasTrack={false}
 					aria-label='...'
 					options={{
-						autoplay: true,
 						arrows: false,
 						pagination: false,
 						perPage: 8,

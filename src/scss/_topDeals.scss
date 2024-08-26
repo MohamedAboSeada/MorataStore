@@ -1,0 +1,69 @@
+.topdeals {
+	padding: 50px 0;
+	background-color: #fbfbfb;
+	.container {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+
+		.section__header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			border-bottom: 1px solid #e5e5e5;
+
+			h2 {
+				height: 50px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: relative;
+				color: #444;
+				&::before {
+					content: '';
+					position: absolute;
+					bottom: -2px;
+					left: 0;
+					width: 100%;
+					height: 3px;
+					background-color: orange;
+				}
+			}
+			.counter {
+				font-size: 1.2rem;
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				& > p {
+					font-weight: 500;
+					color: #777;
+				}
+				.countdown {
+					display: flex;
+					background-color: #dd3842;
+					color: #fff;
+					height: 50px;
+					width: 200px;
+					justify-content: space-between;
+					align-items: center;
+					padding: 0 20px;
+					p {
+						font-weight: 500;
+					}
+				}
+			}
+		}
+	}
+	@media (max-width: 980px) {
+		.section__header {
+			flex-direction: column;
+			align-items: flex-start !important;
+			gap: 20px;
+			padding-bottom: 20px;
+			.counter {
+				flex-direction: column;
+				align-items: flex-start !important;
+			}
+		}
+	}
+}

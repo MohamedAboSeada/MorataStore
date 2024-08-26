@@ -33,7 +33,7 @@ body {
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1300px;
+    width: 1230px;
   }
 }
 
@@ -58,6 +58,120 @@ a {
   opacity: 0;
 }
 
+.product {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+}
+.product .product__thumbnail {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product .product__thumbnail img {
+  width: 100%;
+}
+.product .product__thumbnail .product__dis {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #5aab19;
+  color: #fff;
+  width: 50px;
+  padding: 5px 0;
+  text-align: center;
+  border-radius: 5px;
+  z-index: 1;
+}
+.product .product__thumbnail .thumb__btns {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+  z-index: 1;
+}
+.product .product__thumbnail .thumb__btns .thumb__btn {
+  background-color: #f1f1f1;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.product .p_details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.product .p_details .p_name {
+  font-weight: 600;
+}
+.product .p_details .p_price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #cc1414;
+  font-weight: 600;
+}
+.product .p_details .p_price span {
+  color: #777;
+  text-decoration: line-through;
+}
+.product .p_details .progress {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.product .p_details .bar {
+  width: 100%;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 25px;
+  overflow: hidden;
+}
+.product .p_details .track {
+  height: 100%;
+  background-color: #cc1414;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.product .p_details .stock {
+  color: #777;
+  font-weight: 500;
+}
+.product .p_details .stock span {
+  color: #000;
+}
+.product .cart__btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.fadeInAnim {
+  animation: fadeIn 300ms ease;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .topheader {
   background-color: #222;
   border-bottom: 1px solid #444;
@@ -552,18 +666,6 @@ a {
     border-radius: 0;
   }
 }
-.fadeInAnim {
-  animation: fadeIn 300ms ease;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .hero .slide {
   height: 60vh;
   background-size: cover;
@@ -632,12 +734,12 @@ a {
 }
 
 .categories {
-  padding: 30px 0;
+  padding: 50px 0;
 }
 .categories .container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 30px;
 }
 .categories .cats .cat {
   background-color: #fff;
@@ -688,4 +790,72 @@ a {
 }
 .categories .add__cats .cat a {
   color: #fff;
+}
+
+.topdeals {
+  padding: 50px 0;
+  background-color: #fbfbfb;
+}
+.topdeals .container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.topdeals .container .section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e5e5;
+}
+.topdeals .container .section__header h2 {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #444;
+}
+.topdeals .container .section__header h2::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: orange;
+}
+.topdeals .container .section__header .counter {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.topdeals .container .section__header .counter > p {
+  font-weight: 500;
+  color: #777;
+}
+.topdeals .container .section__header .counter .countdown {
+  display: flex;
+  background-color: #dd3842;
+  color: #fff;
+  height: 50px;
+  width: 200px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.topdeals .container .section__header .counter .countdown p {
+  font-weight: 500;
+}
+@media (max-width: 980px) {
+  .topdeals .section__header {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 20px;
+    padding-bottom: 20px;
+  }
+  .topdeals .section__header .counter {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
 }/*# sourceMappingURL=main.css.map */

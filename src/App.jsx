@@ -3,6 +3,7 @@ import TopHeader from './components/TopHeader';
 import Nav from './components/Nav';
 import Hero from './components/Hero';
 import Categories from './components/Cats';
+import TopDeals from './components/TopDeals';
 import {
 	CurrencyContext,
 	LanguageContext,
@@ -23,6 +24,7 @@ function App() {
 							<Nav />
 							<Hero />
 							<Categories />
+							<TopDeals targetDate={'2024-12-1'} />
 						</>
 					</CartContext>
 				</FavContext>
