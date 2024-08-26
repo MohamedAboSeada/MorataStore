@@ -23,44 +23,39 @@ function extractClassNames(jsxCode) {
 }
 
 // Example JSX code
-const jsxCode = `<div className='categories'>
+const jsxCode = `<div className='topdeals'>
 			<div className='container'>
-				<div className='cats'>
-					<a href='#' className='cat'>
-						<img src='./images/tools/paint_brush.jpeg' />
-						Paint Brush
-					</a>
-					<a href='#' className='cat'>
-						<img src='./images/tools/driling.jpeg' />
-						Drilling
-					</a>
-					<a href='#' className='cat'>
-						<img src='./images/tools/wheel.jpeg' />
-						WheelBarrow
-					</a>
-					<a href='#' className='cat'>
-						<img src='./images/tools/cutting.jpeg' />
-						Cutting
-					</a>
-					<a href='#' className='cat'>
-						<img src='./images/tools/voltmeter.jpeg' />
-						Voltmeter
-					</a>
-					<a href='#' className='cat'>
-						<img src='./images/tools/screw.jpeg' />
-						ScrewDriver
-					</a>
-					<a href='#' className='cat'>
-						<img src='./images/tools/hammer.jpeg' />
-						Hammers
-					</a>
-					<a href='#' className='cat'>
-						<img src='./images/tools/ladders.jpeg' />
-						Ladders
-					</a>
-				</div>
-			</div>
-		</div>`;
+				<Splide
+					tag='section'
+					hasTrack={false}
+					aria-label='...'
+					options={{
+						pagination: false,
+						perPage: 5,
+						gap: '5px',
+						breakpoints: {
+							980: {
+								perPage: 2,
+							},
+						},
+					}}
+				>
+					<SplideTrack>
+						{topdeals.map((topdeal) => (
+							<SplideSlide key={topdeal.id}>
+								<Product
+									discount={topdeal.discount}
+									image={topdeal.image}
+									image_h={topdeal.image_h}
+									title={topdeal.title}
+									price={topdeal.price}
+									stock={topdeal.stock}
+								/>
+							</SplideSlide>
+						))}
+					</SplideTrack>
+				</Splide>
+			</div>`;
 
 // Extract class names and copy to clipboard
 console.log(extractClassNames(jsxCode));
