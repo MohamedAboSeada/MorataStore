@@ -29,7 +29,7 @@ function Product({ image, image_h, discount, title, price, stock }) {
 		>
 			<div className='product__thumbnail'>
 				<p className='product__dis'>{discount}%</p>
-				<img ref={pimage} src={image} alt={title} />
+				<img loading='lazy' ref={pimage} src={image} alt={title} />
 				<div className='thumb__btns'>
 					<button className='thumb__btn'>
 						<Heart size={17} />

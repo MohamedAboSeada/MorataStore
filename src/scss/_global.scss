@@ -206,3 +206,27 @@ a {
 		background-color: #eee;
 	}
 }
+.toTop {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #000;
+	color: #fff;
+	border-radius: 10px;
+}
+.sponsors {
+	padding: 50px 0;
+	h2 {
+		text-align: center;
+		margin-bottom: 20px;
+		color: orange;
+	}
+	img {
+		width: 200px;
+	}
+}
