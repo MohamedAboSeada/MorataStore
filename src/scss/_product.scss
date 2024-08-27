@@ -1,0 +1,124 @@
+// product style
+.product {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 20px;
+	padding: 10px;
+	border: 1px solid #e5e5e5;
+	background-color: #fff;
+
+	// product thumbnail
+	.product__thumbnail {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 230px;
+		img {
+			width: 100%;
+		}
+		.product__dis {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			background-color: #5aab19;
+			color: #fff;
+			width: 50px;
+			padding: 5px 0;
+			text-align: center;
+			border-radius: 5px;
+			z-index: 1;
+		}
+		.thumb__btns {
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 5px;
+			z-index: 1;
+			.thumb__btn {
+				background-color: #f1f1f1;
+				width: 36px;
+				height: 36px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 50%;
+			}
+		}
+		@media (max-width: 980px) {
+			height: 150px;
+		}
+	}
+
+	// product details
+	.p_details {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 10px;
+		.p_name {
+			font-weight: 600;
+		}
+		.p_price {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			color: #cc1414;
+			font-weight: 600;
+			span {
+				color: #777;
+				text-decoration: line-through;
+			}
+		}
+
+		.progress {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 10px;
+		}
+		.bar {
+			width: 100%;
+			height: 10px;
+			background-color: #ccc;
+			border-radius: 25px;
+			overflow: hidden;
+		}
+		.track {
+			height: 100%;
+			background-color: #cc1414;
+			border-top-right-radius: 25px;
+			border-bottom-right-radius: 25px;
+		}
+		.stock {
+			color: #777;
+			font-weight: 500;
+			span {
+				color: #000;
+			}
+			@media (max-width: 980px) {
+				font-size: 0.8rem;
+			}
+		}
+		@media (max-width: 980px) {
+			.p_name,
+			.p_price {
+				font-size: 0.9rem;
+			}
+		}
+	}
+
+	// cart button
+	.cart__btn {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		justify-content: center;
+		padding: 10px;
+		background-color: #000;
+		color: #fff;
+		border-radius: 5px;
+	}
+	@media (max-width: 980px) {
+	}
+}

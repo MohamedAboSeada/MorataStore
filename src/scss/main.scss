@@ -1,8 +1,21 @@
+// global rules
 @import 'global';
-@import 'TopHeader';
+
+// nav and it's related
 @import 'nav';
+@import 'side';
+@import 'form';
+
+// hero section
 @import 'hero';
+
+// product and it's related sections
+@import 'product';
 @import 'categories';
 @import 'topDeals';
-@import 'footer';
+
+// blog and services and sponsors
 @import 'highlights';
+
+// footer
+@import 'footer';

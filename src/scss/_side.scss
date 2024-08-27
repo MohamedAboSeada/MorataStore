@@ -1,0 +1,60 @@
+// side menus style
+.side {
+	position: fixed;
+	right: 0;
+	top: 0;
+	background-color: #fff;
+	height: 100%;
+	width: 30%;
+	z-index: 999;
+	box-shadow: 0 0 0 2000px rgba($color: #000000, $alpha: 0.4);
+	transition: 300ms ease;
+
+	.sideHeader {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 15px 20px;
+		background-color: #f1f1f1;
+		.side__header {
+			letter-spacing: 1px;
+		}
+		.side__close {
+			background-color: transparent;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			&:hover {
+				rotate: 90deg;
+			}
+		}
+	}
+	.sidecontent {
+		.empty {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			gap: 30px;
+			padding: 50px 0;
+			.empty__image {
+				width: 100px;
+			}
+			.empty__text {
+				text-transform: capitalize;
+				font-weight: 500;
+				color: #888;
+				letter-spacing: 1px;
+				font-size: 1.2rem;
+			}
+		}
+	}
+
+	&.hide {
+		box-shadow: 0 0 0 2000px transparent;
+	}
+
+	@media (max-width: 980px) {
+		width: 100%;
+	}
+}

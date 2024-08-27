@@ -1,0 +1,95 @@
+// Register Form style
+.register {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	background-color: #fff;
+	box-shadow: 0 0 0 1000px rgba($color: #000000, $alpha: 0.3);
+	transform: translate(-50%, -50%);
+	z-index: 1000;
+	width: 35%;
+	padding: 20px;
+	display: grid;
+	gap: 15px;
+	grid-template-columns: 1fr;
+	border-radius: 20px;
+	transition: 300ms ease;
+	align-content: flex-start;
+	.clost__btn {
+		justify-self: flex-end;
+		background-color: transparent;
+	}
+	.register__header {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		height: 50px;
+		margin-bottom: 10px;
+		.register__btn {
+			padding: 10px 15px;
+			font-size: 1.2rem;
+			background-color: transparent;
+			border-bottom: 3px solid #ccc;
+			text-transform: uppercase;
+			font-weight: 700;
+			letter-spacing: 1px;
+			&.active {
+				border-color: orange;
+			}
+		}
+	}
+	.register__form {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 15px;
+		.field {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 5px;
+			& label {
+				font-weight: 500;
+				text-transform: capitalize;
+				.required {
+					color: orange;
+				}
+			}
+			& input {
+				border: 1px solid #ccc;
+				outline: none;
+				font-size: 1.2rem;
+				padding: 15px;
+				border-radius: 10px;
+			}
+		}
+	}
+	.submit {
+		padding: 15px 15px;
+		background-color: #000;
+		color: #fff;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		font-size: 1rem;
+		border-radius: 10px;
+		&:hover {
+			background-color: orange;
+			color: #000;
+		}
+	}
+
+	.forget {
+		color: #000;
+		transition: 300ms ease;
+		&:hover {
+			color: #333;
+		}
+	}
+
+	.terms {
+		text-align: center;
+		color: #777;
+	}
+	@media (max-width: 980px) {
+		width: 100%;
+		height: 100%;
+		border-radius: 0;
+	}
+}
