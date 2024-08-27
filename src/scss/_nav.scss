@@ -1,5 +1,8 @@
 .nav {
 	background-color: #222;
+	position: sticky;
+	top: -5px;
+	z-index: 1000;
 	// container
 	.container {
 		display: grid;

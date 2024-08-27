@@ -82,6 +82,7 @@ function Footer() {
 							Play. Get it now.
 						</p>
 						<img
+							loading='lazy'
 							src='./images/footer/app_download.png'
 							alt='apps'
 							className='footer__app-image'
@@ -101,7 +102,11 @@ function Footer() {
 							experience in the Electronic industry.
 						</p>
 						<div className='footer__call'>
-							<Headphones color='orange' size={60} className='icon' />
+							<Headphones
+								color='orange'
+								size={60}
+								className='icon'
+							/>
 							<div className='info'>
 								<p className='footer__text'>
 									Got a Question? Call us 24/7
@@ -243,6 +248,7 @@ function Footer() {
 						<li>
 							<a href='#'>
 								<img
+									loading='lazy'
 									src='./images/footer/amazon.svg'
 									alt='Amazon'
 								/>
@@ -251,6 +257,7 @@ function Footer() {
 						<li>
 							<a href='#'>
 								<img
+									loading='lazy'
 									src='./images/footer/apple.svg'
 									alt='Apple'
 								/>
@@ -258,12 +265,17 @@ function Footer() {
 						</li>
 						<li>
 							<a href='#'>
-								<img src='./images/footer/pay.svg' alt='Pay' />
+								<img
+									loading='lazy'
+									src='./images/footer/pay.svg'
+									alt='Pay'
+								/>
 							</a>
 						</li>
 						<li>
 							<a href='#'>
 								<img
+									loading='lazy'
 									src='./images/footer/visa.svg'
 									alt='Visa'
 								/>
@@ -272,6 +284,7 @@ function Footer() {
 						<li>
 							<a href='#'>
 								<img
+									loading='lazy'
 									src='./images/footer/paypal.svg'
 									alt='PayPal'
 								/>
@@ -280,6 +293,7 @@ function Footer() {
 						<li>
 							<a href='#'>
 								<img
+									loading='lazy'
 									src='./images/footer/mastercard.svg'
 									alt='MasterCard'
 								/>

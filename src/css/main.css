@@ -375,6 +375,9 @@ a {
 
 .nav {
   background-color: #222;
+  position: sticky;
+  top: -5px;
+  z-index: 1000;
 }
 .nav .container {
   display: grid;
@@ -1166,9 +1169,6 @@ a {
   }
   .footer .footer__text {
     width: 80%;
-  }
-  .footer .footer__app-image {
-    width: 300px !important;
   }
   .footer .footer__input-group {
     flex-direction: column;
