@@ -173,6 +173,13 @@ a {
 		.product__thumbnail {
 			height: 150px;
 		}
+		.p_name,
+		.p_price {
+			font-size: 0.9rem !important;
+		}
+		.stock {
+			font-size: 0.8rem;
+		}
 	}
 }
 

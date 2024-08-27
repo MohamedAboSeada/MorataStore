@@ -17,6 +17,7 @@ import Cutting from './components/Cutting';
 import { ArrowUp } from 'react-feather';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import Footer from './components/Footer';
 
 function App() {
 	let [scrollH, setScrollH] = useState(window.scrollY);
@@ -45,6 +46,7 @@ function App() {
 							<Drilling />
 							<Cutting />
 							<Sponsors />
+							<Footer />
 							{scrollH >= 200 && (
 								<button
 									onClick={() =>
