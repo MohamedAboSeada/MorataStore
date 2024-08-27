@@ -18,7 +18,8 @@ import { ArrowUp } from 'react-feather';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import Footer from './components/Footer';
-
+import TopSales, { Services } from './components/TopSales';
+import Blog from './components/Blog';
 function App() {
 	let [scrollH, setScrollH] = useState(window.scrollY);
 
@@ -45,6 +46,9 @@ function App() {
 							<TopDeals targetDate={'2024-12-1'} />
 							<Drilling />
 							<Cutting />
+							<TopSales />
+							<Services />
+							<Blog />
 							<Sponsors />
 							<Footer />
 							{scrollH >= 200 && (

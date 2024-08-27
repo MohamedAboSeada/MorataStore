@@ -1,19 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
-:root {
-  --Black: #000000;
-  --White: #ffffff;
-  --gray-1: #6b6b6b;
-  --gray-2: #777777;
-  --gray-3: #8d979e;
-  --gray-4: #999999;
-  --discount-color: #5aab19;
-  --red-1: #cc1414;
-  --red-2: #dd3842;
-  --red-3: #e92e2e;
-  --orange: #fdbe01;
-  --yellow: #f6ea3c;
-}
-
 body {
   font-family: "Rubik", sans-serif;
 }
@@ -26,6 +11,8 @@ body::-webkit-scrollbar-thumb {
   background-color: #333;
 }
 body::-webkit-scrollbar-track {
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
   background-color: #ccc;
 }
 
@@ -226,18 +213,6 @@ a {
   background-color: #000;
   color: #fff;
   border-radius: 10px;
-}
-
-.sponsors {
-  padding: 50px 0;
-}
-.sponsors h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: orange;
-}
-.sponsors img {
-  width: 200px;
 }
 
 .topheader {
@@ -1200,5 +1175,180 @@ a {
   .footer .footer__site-menu a,
   .footer .footer__payments a {
     padding: 5px !important;
+  }
+}
+
+.highlights {
+  padding: 50px 0;
+  background-color: #f7f7f7;
+}
+.highlights .container {
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 980px) {
+  .highlights .container {
+    flex-direction: column;
+  }
+}
+.highlights .highlights__group {
+  width: 50%;
+  border-radius: 10px;
+  padding: 20px;
+  height: 250px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.highlights .highlights__group:nth-child(1) {
+  background-image: url("C:/Users/Mor3eb/Desktop/files/react js/MorataStore/public/images/deals/top_sale.png");
+}
+.highlights .highlights__group:nth-child(2) {
+  background-image: url("C:/Users/Mor3eb/Desktop/files/react js/MorataStore/public/images/deals/best_sale.png");
+}
+.highlights .highlights__group .highlights__title {
+  color: orange;
+  font-size: 1.2rem;
+  letter-spacing: 1.2px;
+}
+.highlights .highlights__group .highlights__text {
+  color: #fff;
+  font-weight: 400;
+  font-size: 2rem;
+  margin: 10px 0 20px 0;
+}
+@media (max-width: 980px) {
+  .highlights .highlights__group .highlights__text {
+    font-size: 1.5rem;
+  }
+}
+.highlights .highlights__group .highlights__link {
+  width: 150px;
+  background-color: orange;
+  color: #000;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 980px) {
+  .highlights .highlights__group {
+    width: 100% !important;
+  }
+}
+
+.services {
+  padding: 50px 0;
+}
+.services .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 980px) {
+  .services .container {
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+.services .service {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 120px;
+  padding: 0 20px;
+}
+.services .service .service__text {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+.services .service .service__title {
+  color: #777;
+}
+@media (max-width: 980px) {
+  .services .service {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.sponsors {
+  padding: 50px 0;
+}
+.sponsors h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: orange;
+}
+.sponsors img {
+  width: 200px;
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.posts .post {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.posts .post__thumb {
+  position: relative;
+}
+.posts .post__thumb .post__image {
+  width: 100%;
+  border-radius: 10px;
+}
+.posts .post__thumb .post__badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: orange;
+  color: #000;
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+.posts .post__info {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 10px 0;
+}
+.posts .post__info .post__text {
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #333;
+}
+.posts .post__info .post__by {
+  color: #555;
+}
+.posts .post__info .post__by .post__user {
+  color: orange;
+}
+.posts .post__meta {
+  border-top: 1px solid #aaa;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.posts .post__meta .post__more,
+.posts .post__meta .post__date {
+  color: #333;
+  font-weight: 500;
+}
+@media (max-width: 980px) {
+  .posts {
+    grid-template-columns: 1fr;
   }
 }/*# sourceMappingURL=main.css.map */
