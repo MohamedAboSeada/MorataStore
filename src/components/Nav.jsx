@@ -29,8 +29,8 @@ function Nav() {
 		let handleResize = () => {
 			setInnerWidth(window.innerWidth);
 		};
-		window.addEventListener('click', handleResize);
-		return () => window.removeEventListener('click', handleResize);
+		window.addEventListener('resize', handleResize);
+		return () => window.removeEventListener('resize', handleResize);
 	}, [navMenu]); // mount / navMenu / unmount
 
 	return (
@@ -68,11 +68,11 @@ function Nav() {
 					<div className='search__menu'>
 						<button
 							onClick={() =>
-								navMenu.current.classList.toggle('hide')
+								navMenu.current.classList.remove('hide')
 							}
 							className='menu__btn'
 						>
-							<Menu size={25} />
+							<Menu />
 						</button>
 						<div className='search'>
 							<input
@@ -84,106 +84,6 @@ function Nav() {
 							/>
 							<button className='search__btn'>Search</button>
 						</div>
-						<ul ref={navMenu} className='nav__menu hide'>
-							{innerWidth <= 600 && (
-								<button
-									className='menu__close'
-									onClick={() =>
-										navMenu.current.classList.add('hide')
-									}
-								>
-									<X className='close' /> Close
-								</button>
-							)}
-
-							<li className='menu__item'>
-								<a className='menu__link' href='#'>
-									Computer & Desktop <ChevronRight />
-								</a>
-							</li>
-							<li className='menu__item'>
-								<a className='menu__link' href='#'>
-									Laptop & Ipad <ChevronRight />
-								</a>
-							</li>
-							<li className='menu__item'>
-								<a className='menu__link' href='#'>
-									Cameras & Photos <ChevronRight />
-								</a>
-							</li>
-							<li className='menu__item'>
-								<a className='menu__link' href='#'>
-									Smartphones & Tablets <ChevronRight />
-								</a>
-							</li>
-							<li className='menu__item'>
-								<a className='menu__link' href='#'>
-									Home & Kitchen <ChevronRight />
-								</a>
-							</li>
-							<li className='menu__item'>
-								<a className='menu__link' href='#'>
-									TV & Audio
-								</a>
-							</li>
-							<li className='menu__item'>
-								<a className='menu__link' href='#'>
-									Health & Beauty
-								</a>
-							</li>
-							<li className='menu__item'>
-								<a className='menu__link' href='#'>
-									Watches & Eyewear
-								</a>
-							</li>
-							<li className='menu__item'>
-								<a className='menu__link' href='#'>
-									Top Deals
-								</a>
-							</li>
-							<li className='menu__item'>
-								<a className='menu__link' href='#'>
-									Top Selling Products
-								</a>
-							</li>
-							<li className='menu__item'>
-								<a className='menu__link' href='#'>
-									Top Featured Products
-								</a>
-							</li>
-							{innerWidth <= 600 && (
-								<>
-									<li className='menu__item'>
-										<a
-											onClick={() => {
-												navMenu.current.classList.add(
-													'hide'
-												);
-												setWishlistHidden(false);
-											}}
-											className='menu__link'
-											href='#'
-										>
-											Wishlist ({fquan}) <ChevronRight />
-										</a>
-									</li>
-									<li className='menu__item'>
-										<a
-											onClick={() => {
-												navMenu.current.classList.add(
-													'hide'
-												);
-												setHidden(false);
-											}}
-											className='menu__link'
-											href='#'
-										>
-											Login/Register <ChevronRight />
-										</a>
-									</li>
-								</>
-							)}
-						</ul>
 					</div>
 					<div className='nav__btns'>
 						<button
@@ -228,6 +128,86 @@ function Nav() {
 								<p className='btntext__desc'>$0.00</p>
 							</div>
 						</button>
+					</div>
+				</div>
+				<div
+					ref={navMenu}
+					className={`nav__menu ${innerWidth <= 600 ? 'hide' : ''}`}
+				>
+					{innerWidth <= 980 && (
+						<button
+							onClick={() => {
+								navMenu.current.classList.add('hide');
+							}}
+							className='close__btn'
+						>
+							<X /> Close
+						</button>
+					)}
+					<div className='container'>
+						<ul className='nav__menu-list'>
+							{innerWidth <= 980 && (
+								<>
+									<li className='menu__item'>
+										<a
+											onClick={() => {
+												setHidden(false);
+												navMenu.current.classList.add(
+													'hide'
+												);
+											}}
+											className='menu__link'
+										>
+											Login/Register
+										</a>
+									</li>
+									<li className='menu__item'>
+										<a
+											className='menu__link'
+											onClick={() => {
+												setWishlistHidden(false);
+												navMenu.current.classList.add(
+													'hide'
+												);
+											}}
+										>
+											Wishlist ({fquan})
+										</a>
+									</li>
+								</>
+							)}
+
+							<li className='menu__item'>
+								<a className='menu__link' href='#'>
+									Home
+								</a>
+							</li>
+							<li className='menu__item'>
+								<a className='menu__link' href='#'>
+									Shop
+								</a>
+							</li>
+							<li className='menu__item'>
+								<a className='menu__link' href='#'>
+									Products
+								</a>
+							</li>
+							<li className='menu__item'>
+								<a className='menu__link' href='#'>
+									Pages
+								</a>
+							</li>
+							<li className='menu__item'>
+								<a className='menu__link' href='#'>
+									Blog
+								</a>
+							</li>
+							<li className='menu__item'>
+								<a className='menu__link' href='#'>
+									Contact US
+								</a>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</nav>
@@ -325,7 +305,7 @@ function RegesterForm({ hidden, setHidden }) {
 	return (
 		<div className={`register ${hidden && 'hide'}`}>
 			<button onClick={handleHide} className='clost__btn'>
-				<X color="#666"/>
+				<X color='#666' />
 			</button>
 			<div className='register__header'>
 				<button

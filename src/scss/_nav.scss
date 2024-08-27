@@ -30,56 +30,6 @@
 			height: 100px;
 			position: relative;
 
-			.nav__menu {
-				background-color: #fff;
-				position: absolute;
-				z-index: 1000;
-				top: calc(100% - 15px);
-				left: 0;
-				list-style: none;
-				width: 350px;
-				padding: 0;
-				transition: 300ms ease;
-				box-shadow: 0 10px 10px rgba($color: #000000, $alpha: 0.2);
-				&.hide {
-					visibility: hidden;
-					opacity: 0;
-					top: 100%;
-				}
-
-				.menu__close {
-					display: flex;
-					align-items: center;
-					gap: 10px;
-					margin: 5px 10px;
-					padding: 20px 0;
-					background-color: transparent;
-				}
-
-				.menu__item {
-					border-bottom: 1px solid #e5e5e5;
-					.menu__link {
-						display: flex;
-						align-items: center;
-						justify-content: space-between;
-						width: 100%;
-						padding: 10px;
-						color: #000;
-						&:hover {
-							background-color: #f1f1f1;
-						}
-					}
-				}
-				&::before {
-					content: '';
-					position: absolute;
-					top: calc(-19px);
-					left: 9px;
-					border-width: 10px;
-					border-style: solid;
-					border-color: transparent transparent #fff transparent;
-				}
-			}
 			.menu__btn {
 				background-color: transparent;
 				color: #fff;
@@ -252,16 +202,6 @@
 		.side {
 			width: 100%;
 		}
-		.nav__menu {
-			background-color: #fff;
-			position: fixed !important;
-			top: calc(100% - 15px);
-			left: 0 !important;
-			top: 0 !important;
-			border-radius: 0 !important;
-			width: 100% !important;
-			height: 100%;
-		}
 	}
 }
 
@@ -366,3 +306,56 @@
 	}
 }
 
+.nav__menu {
+	background-color: orange;
+	.close__btn {
+		margin: 20px;
+		margin-bottom: 0;
+		background-color: transparent;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+		font-size: 1.2rem;
+		color: #666;
+	}
+	.container {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+	.nav__menu-list {
+		padding: 0;
+		list-style: none;
+		display: flex;
+		width: 100%;
+		@media (max-width: 980px) {
+			flex-direction: column;
+			width: 100%;
+		}
+
+		.menu__item {
+			display: block;
+			.menu__link {
+				display: flex;
+				height: 50px;
+				align-items: center;
+				justify-content: center;
+				padding: 0 10px;
+				transition: 300ms ease;
+				color: #000;
+				@media (max-width: 980px) {
+					justify-content: flex-start;
+					width: 100%;
+				}
+			}
+		}
+	}
+	@media (max-width: 980px) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color: #fff;
+		height: 100%;
+		width: 100%;
+	}
+}
